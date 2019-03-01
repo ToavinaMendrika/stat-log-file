@@ -37,6 +37,7 @@ def request_per_hour(fname):
     file = open(fname,"r")
     total = file_len(fname)
     num_lines = 0
+    req = {}
     print("Ananlyse du fichier...")
     for line in file:
         num_lines += 1
@@ -44,9 +45,9 @@ def request_per_hour(fname):
         sys.stdout.write('\r')
         sys.stdout.write("{}%".format(percentage))
         sys.stdout.flush()
-        letter  = line.split(" ")
-        req = {}
+        letter  = line.split(" ")    
         key = letter[1][1:6] 
+        print(key)
         if key in req:
             req[key] += 1
         else:
