@@ -1,4 +1,3 @@
-import sys
 def file_len(fname):
     """
     Nombre de ligne dans le fichier
@@ -42,7 +41,7 @@ def count_request(fname, index, filter):
     """
     file = open(fname,"r")
     get_request = 0
-    print("Ananlyse du fichier...")
+    print("Analyse du fichier...")
     for line in file:
         letter  = line.split(" ")
         try:

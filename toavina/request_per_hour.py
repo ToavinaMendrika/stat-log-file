@@ -1,4 +1,3 @@
-import sys
 def file_len(fname):
     """
     Nombre de ligne dans le fichier
@@ -22,18 +21,14 @@ def file_len(fname):
 def request_per_hour(fname):
     """ return: nombre de requête par heur"""
     file = open(fname,"r")
-    total = file_len(fname)
+    #total = file_len(fname)
     num_lines = 0
-    req = {}
+    #req = {}
     print("Ananlyse du fichier...")
     for line in file:
         num_lines += 1
-        percentage = round(100 * num_lines / total)
-        sys.stdout.write('\r')
-        sys.stdout.write("{}%".format(percentage))
-        sys.stdout.flush()
-        letter  = line.split(" ")    
-        key = letter[1][1:6] 
+        #letter  = line.split(" ")    
+        #key = letter[1][1:6] 
         # print(key)
         # if key in req:
         #     req[key] += 1
